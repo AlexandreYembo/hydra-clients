@@ -1,2 +1,2 @@
-# hydra-clients
-Api used to manage the application's clients
+# hydra-customers
+Api used to manage the application's customers
