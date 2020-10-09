@@ -33,3 +33,5 @@ Represent the DDD architecture
 1. Models (Aggregrations, entities and value object).
 
 2. Interfaces (Repository)
+
+![alt text](https://github.com/AlexandreYembo/hydra-customers/blob/main/Customer_Architecture.png)
