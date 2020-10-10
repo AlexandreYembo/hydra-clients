@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Customers.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Customers.Domain", "Hydra.Customers.Domain\Hydra.Customers.Domain.csproj", "{52DF6BEB-FA70-413D-9E63-67BCFDFCF4BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{7421C1A0-0AC0-11EB-8DAD-E791BE1BB5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "..\hydra-core\Hydra.Core\Hydra.Core.csproj", "{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +76,20 @@ Global
 		{52DF6BEB-FA70-413D-9E63-67BCFDFCF4BB}.Release|x64.Build.0 = Release|Any CPU
 		{52DF6BEB-FA70-413D-9E63-67BCFDFCF4BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{52DF6BEB-FA70-413D-9E63-67BCFDFCF4BB}.Release|x86.Build.0 = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|x64.Build.0 = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Debug|x86.Build.0 = Debug|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|x64.ActiveCfg = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|x64.Build.0 = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7} = {7421C1A0-0AC0-11EB-8DAD-E791BE1BB5CC}
 	EndGlobalSection
 EndGlobal
