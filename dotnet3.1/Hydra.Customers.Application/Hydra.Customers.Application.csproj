@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\hydra-core\Hydra.Core\Hydra.Core.csproj" />
+    <ProjectReference Include="..\Hydra.Customers.Domain\Hydra.Customers.Domain.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>

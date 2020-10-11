@@ -15,7 +15,7 @@ namespace Hydra.Customers.Infrastructure.Mappings
                    .IsRequired()
                    .HasColumnType("varchar(200)");
 
-            builder.Property(c => c.IdentityCard)
+            builder.Property(c => c.IdentityNumber)
                    .IsRequired()
                    .HasColumnType("varchar(50)");
             
