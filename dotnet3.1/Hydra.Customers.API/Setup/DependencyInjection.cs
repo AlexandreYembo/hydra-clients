@@ -1,6 +1,7 @@
 using FluentValidation.Results;
 using Hydra.Core.Communication.Mediator;
 using Hydra.Customers.Application.Commands;
+using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Repository;
 using Hydra.Customers.Infrastructure.Data;
 using Hydra.Customers.Infrastructure.Repositories;
@@ -18,6 +19,9 @@ namespace Hydra.Customers.API.Setup
 
             //DI for commands
             services.AddScoped<IRequestHandler<SaveCustomerCommand, ValidationResult>, CustomerCommandHandler>();
+
+            //DI for Events
+            services.AddScoped<INotificationHandler<CustomerSavedEvent>, CustomerEventHandler>();
 
             //DI for Repository
             services.AddScoped<ICustomerRepository, CustomerRepository>();

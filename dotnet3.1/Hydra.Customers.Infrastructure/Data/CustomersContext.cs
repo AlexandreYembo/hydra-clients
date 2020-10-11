@@ -6,17 +6,20 @@ using Hydra.Core.Data;
 using Hydra.Customers.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Hydra.Core.Messages;
+using Hydra.Core.Communication.Mediator;
+using Hydra.Core.Extensions;
 
 namespace Hydra.Customers.Infrastructure.Data
 {
     public class CustomersContext: DbContext, IUnitOfWork
     {
-
+        private readonly IMediatorHandler _mediatorHandler;
         //DbContextOptions used for entity framework core in dotnet core.
         //It is a kind of factory that will be configure the context on Startup.cs
-        public CustomersContext(DbContextOptions<CustomersContext> options) : base(options){ 
+        public CustomersContext(DbContextOptions<CustomersContext> options, IMediatorHandler mediatorHandler) : base(options){ 
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             ChangeTracker.AutoDetectChangesEnabled = false;
+            _mediatorHandler = mediatorHandler;
         }
 
         public DbSet<Customer> Customers {get; set; }
@@ -43,7 +46,11 @@ namespace Hydra.Customers.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        public async Task<bool> Commit() {
+            var result = await base.SaveChangesAsync() > 0;
+            if(result) await _mediatorHandler.PublishEvents(this);
 
-        public async Task<bool> Commit() => await base.SaveChangesAsync() > 0;
+            return result;
+        }
     }
 }

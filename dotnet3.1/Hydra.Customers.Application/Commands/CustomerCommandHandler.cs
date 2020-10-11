@@ -2,12 +2,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using Hydra.Core.Messages;
+using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Models;
 using Hydra.Customers.Domain.Repository;
 using MediatR;
 
 namespace Hydra.Customers.Application.Commands
 {
+    //IRequestHandler -> When you send anything
     public class CustomerCommandHandler : CommandHandler,
                                         IRequestHandler<SaveCustomerCommand, ValidationResult>
     {
@@ -36,6 +38,8 @@ namespace Hydra.Customers.Application.Commands
             }
 
             _repository.Add(customer);
+
+            customer.AddEvent(new CustomerSavedEvent(message.Id, message.Name, message.Email, message.IdentityNumber));
 
             return await Save(_repository.UnitOfWork);
         }
