@@ -64,7 +64,7 @@ namespace Hydra.Customers.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("IdentityCard")
+                    b.Property<string>("IdentityNumber")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
@@ -90,7 +90,7 @@ namespace Hydra.Customers.Infrastructure.Migrations
 
             modelBuilder.Entity("Hydra.Customers.Domain.Models.Customer", b =>
                 {
-                    b.OwnsOne("Hydra.Customers.Domain.ValueObjects.Email", "Email", b1 =>
+                    b.OwnsOne("Hydra.Core.DomainObjects.Email", "Email", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");

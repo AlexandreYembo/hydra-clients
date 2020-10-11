@@ -24,8 +24,8 @@ namespace Hydra.Customers.Infrastructure.Repositories
             await _context.Customers.AsNoTracking()
                                     .ToListAsync();
 
-        public async Task<Customer> GetByIdentityNumber(string identityNumber) => 
-            await _context.Customers.FirstAsync(c => c.IdentityNumber == identityNumber);
+        public async Task<Customer> GetByIdentityNumber(string identityNumber) =>
+            await _context.Customers.FirstOrDefaultAsync(c => c.IdentityNumber == identityNumber);
 
         public void Dispose() => _context.Dispose();
     }

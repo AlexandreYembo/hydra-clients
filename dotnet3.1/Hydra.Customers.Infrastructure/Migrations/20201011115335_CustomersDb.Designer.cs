@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hydra.Customers.Infrastructure.Migrations
 {
     [DbContext(typeof(CustomersContext))]
-    [Migration("20201010092153_InitialCustomersDbMigration")]
-    partial class InitialCustomersDbMigration
+    [Migration("20201011115335_CustomersDb")]
+    partial class CustomersDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -66,7 +66,7 @@ namespace Hydra.Customers.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("IdentityCard")
+                    b.Property<string>("IdentityNumber")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
@@ -92,7 +92,7 @@ namespace Hydra.Customers.Infrastructure.Migrations
 
             modelBuilder.Entity("Hydra.Customers.Domain.Models.Customer", b =>
                 {
-                    b.OwnsOne("Hydra.Customers.Domain.ValueObjects.Email", "Email", b1 =>
+                    b.OwnsOne("Hydra.Core.DomainObjects.Email", "Email", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");

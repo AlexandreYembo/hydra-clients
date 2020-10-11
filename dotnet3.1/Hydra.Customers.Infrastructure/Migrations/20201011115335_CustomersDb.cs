@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Hydra.Customers.Infrastructure.Migrations
 {
-    public partial class InitialCustomersDbMigration : Migration
+    public partial class CustomersDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace Hydra.Customers.Infrastructure.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     Email = table.Column<string>(type: "varchar(150)", nullable: true),
                     Name = table.Column<string>(type: "varchar(200)", nullable: false),
-                    IdentityCard = table.Column<string>(type: "varchar(50)", nullable: false),
+                    IdentityNumber = table.Column<string>(type: "varchar(50)", nullable: false),
                     IsRemoved = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
