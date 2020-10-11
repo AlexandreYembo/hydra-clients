@@ -1,5 +1,5 @@
+using Hydra.Core.DomainObjects;
 using Hydra.Customers.Domain.Models;
-using Hydra.Customers.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

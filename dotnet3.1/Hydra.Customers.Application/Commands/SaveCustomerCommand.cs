@@ -1,5 +1,6 @@
 using System;
 using Hydra.Core.Messages;
+using Hydra.Customers.Application.Validations;
 
 namespace Hydra.Customers.Application.Commands
 {
@@ -21,5 +22,11 @@ namespace Hydra.Customers.Application.Commands
         public string Name { get; private set; }
         public string Email { get; private set; }
         public string IdentityNumber { get; private set; }
+
+        public override bool IsValid()
+        {
+            ValidationResult = new SaveCustomerValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using Hydra.Core.DomainObjects;
-using Hydra.Customers.Domain.ValueObjects;
 
 namespace Hydra.Customers.Domain.Models
 {
