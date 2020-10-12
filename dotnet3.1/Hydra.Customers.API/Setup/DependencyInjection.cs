@@ -1,5 +1,6 @@
 using FluentValidation.Results;
 using Hydra.Core.Communication.Mediator;
+using Hydra.Customers.API.Services;
 using Hydra.Customers.Application.Commands;
 using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Repository;
