@@ -28,8 +28,8 @@ namespace Hydra.Customers.API.Services
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _messageBus.RespondAsync<UserSaveIntegrationEvent, ResponseMessage>(async request =>
-                await SaveCustomer(request));
+            SetResponder();
+            _messageBus.AdvancedBus.Connected += OnConnect;
 
             return Task.CompletedTask;
         }
@@ -45,6 +45,19 @@ namespace Hydra.Customers.API.Services
             }
 
             return new ResponseMessage(result);
+        }
+
+        /// <summary>
+        /// It will renew the subscription when the application will be abble to connect with RabbitMQ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void OnConnect(object sender, EventArgs e) => SetResponder();
+
+        private void SetResponder()
+        {
+              _messageBus.RespondAsync<UserSaveIntegrationEvent, ResponseMessage>(async request =>
+                await SaveCustomer(request));
         }
     }
 }
