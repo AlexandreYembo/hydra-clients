@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using EasyNetQ;
 using FluentValidation.Results;
 using Hydra.Core.Communication.Mediator;
 using Hydra.Core.Integration.Messages;
