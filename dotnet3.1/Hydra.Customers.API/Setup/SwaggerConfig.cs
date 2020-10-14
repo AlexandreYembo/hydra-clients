@@ -1,9 +1,7 @@
-using System;
 using Hydra.WebAPI.Core.Setups;
 using Hydra.WebAPI.Core.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
 
 namespace Hydra.Customers.API.Setup
 {
