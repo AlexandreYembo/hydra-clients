@@ -1,5 +1,7 @@
 # Hydra Customers API
-Api for customers
+Api for customers.
+
+Workflow for Signup:
 
 ![alt text](https://github.com/AlexandreYembo/hydra-customers/blob/main/Customer_Architecture.png)
 
