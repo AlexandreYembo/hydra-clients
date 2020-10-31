@@ -1,5 +1,8 @@
+using AutoMapper;
+using Hydra.Customers.API.AutoMapper;
 using Hydra.Customers.Infrastructure.Data;
 using Hydra.WebAPI.Core.Identity;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +26,11 @@ namespace Hydra.Customers.API.Setup
                             .AllowAnyMethod()
                             .AllowAnyHeader());
             });
+            
+            //Package: AutoMapper.Extensions.Microsoft.DependencyInjection - used to work with  native Aspnet core dependency injection
+            services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
+            //MediatR.Extensions.Microsoft.DependencyInjection  - used to work with  native Aspnet core dependency injection
+            services.AddMediatR(typeof(Startup));
         }
 
         public static void UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)

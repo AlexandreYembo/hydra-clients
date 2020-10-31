@@ -21,6 +21,10 @@ namespace Hydra.Customers.Infrastructure.Mappings
             builder.Property(c => c.State)
                     .IsRequired()
                     .HasColumnType("varchar(100)");
+        
+            builder.Property(c => c.Country)
+                    .IsRequired()
+                    .HasColumnType("varchar(100)");
 
             builder.Property(c => c.PostCode)
                     .IsRequired()

@@ -5,7 +5,8 @@ namespace Hydra.Customers.Domain.Models
 {
     public class Address: Entity
     {
-        public Address(string street, string number, string city, string state, string postCode, string country)
+        protected Address(){ }
+        public Address(string street, string number, string city, string state, string postCode, string country, Guid customerId)
         {
             Street = street;
             Number = number;
@@ -13,6 +14,7 @@ namespace Hydra.Customers.Domain.Models
             State = state;
             PostCode = postCode;
             Country = country;
+            CustomerID = customerId;
         }
 
         public string Street { get; private set; }
@@ -25,6 +27,6 @@ namespace Hydra.Customers.Domain.Models
         public Guid CustomerID { get; private set; }
 
         //EF Relation
-        public Customer Customer { get; private set; }
+        public Customer Customer { get; protected set; }
     }
 }

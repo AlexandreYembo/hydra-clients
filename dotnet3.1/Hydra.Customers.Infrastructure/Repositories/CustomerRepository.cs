@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hydra.Core.Data;
@@ -23,9 +24,19 @@ namespace Hydra.Customers.Infrastructure.Repositories
         public async Task<IEnumerable<Customer>> GetAll() => 
             await _context.Customers.AsNoTracking()
                                     .ToListAsync();
+        
+        public async  Task<Customer> GetById(Guid id)=> 
+            await _context.Customers.AsNoTracking()
+                                    .FirstOrDefaultAsync(c => c.Id == id);
 
         public async Task<Customer> GetByIdentityNumber(string identityNumber) =>
             await _context.Customers.FirstOrDefaultAsync(c => c.IdentityNumber == identityNumber);
+
+        public async Task<Address> GetAddressByCustomerId(Guid customerId) =>
+            await _context.Addresses.FirstOrDefaultAsync(a => a.CustomerID == customerId);
+
+        public void SaveAddress(Address address) =>
+            _context.Addresses.Add(address);
 
         public void Dispose() => _context.Dispose();
     }

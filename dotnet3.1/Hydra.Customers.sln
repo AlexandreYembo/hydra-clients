@@ -13,13 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Customers.Domain", "H
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{7421C1A0-0AC0-11EB-8DAD-E791BE1BB5CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "..\hydra-core\Hydra.Core\Hydra.Core.csproj", "{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "..\hydra-core\dotnet3.1\Hydra.Core\Hydra.Core.csproj", "{8E54A08E-9BC0-4E48-B37E-3999FF7D68E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.WebAPI.Core", "..\..\hydra-core\Hydra.WebAPI.Core\Hydra.WebAPI.Core.csproj", "{7DABB775-E313-4BA9-BFE2-5191BA19271E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.WebAPI.Core", "..\..\hydra-core\dotnet3.1\Hydra.WebAPI.Core\Hydra.WebAPI.Core.csproj", "{7DABB775-E313-4BA9-BFE2-5191BA19271E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Integration", "..\hydra-core\Hydra.Core.Integration\Hydra.Core.Integration.csproj", "{8238CADA-CE28-4062-BCDD-555D06D86D16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Integration", "..\hydra-core\dotnet3.1\Hydra.Core.Integration\Hydra.Core.Integration.csproj", "{8238CADA-CE28-4062-BCDD-555D06D86D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.MessageBus", "..\hydra-core\Hydra.Core.MessageBus\Hydra.Core.MessageBus.csproj", "{9DE9CD2F-0125-42D2-B6A6-C70F28095126}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.MessageBus", "..\hydra-core\dotnet3.1\Hydra.Core.MessageBus\Hydra.Core.MessageBus.csproj", "{9DE9CD2F-0125-42D2-B6A6-C70F28095126}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integrations", "Integrations", "{D6077310-0CD2-11EB-978E-091D6E1E80E0}"
 EndProject

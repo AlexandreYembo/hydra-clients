@@ -25,7 +25,6 @@ namespace Hydra.Customers.API
             services.AddApiConfiguration(Configuration);
             services.AddJwtConfiguration(Configuration);
             services.AddSwaggerConfiguration();
-            services.AddMediatR(typeof(Startup));
             services.RegisterServices();
             services.AddMessageBusConfiguration(Configuration);
         }

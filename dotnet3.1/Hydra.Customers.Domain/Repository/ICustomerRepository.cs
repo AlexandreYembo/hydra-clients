@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hydra.Core.Data;
@@ -10,7 +11,11 @@ namespace Hydra.Customers.Domain.Repository
          void Add(Customer customer);
 
          Task<IEnumerable<Customer>> GetAll();
+         Task<Customer> GetById(Guid id);
 
          Task<Customer> GetByIdentityNumber(string identityNumber);
+        Task<Address> GetAddressByCustomerId(Guid customerId);
+
+        void SaveAddress(Address address);
     }
 }
