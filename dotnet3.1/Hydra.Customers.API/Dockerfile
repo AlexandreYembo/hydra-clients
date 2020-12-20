@@ -8,10 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["./dotnet3.1/Hydra.Customers.API/Hydra.Customers.API.csproj", "dotnet3.1/Hydra.Customers.API/"]
-# COPY ["./dotnet3.1/Hydra.Customers.Application/Hydra.Customers.Application.csproj", "dotnet3.1/Hydra.Customers.Application/"]
-# COPY ["./dotnet3.1/Hydra.Customers.Domain/Hydra.Customers.Domain.csproj", "dotnet3.1/Hydra.Customers.Domain/"]
-# COPY ["./dotnet3.1/Hydra.Customers.Infrastructure/Hydra.Customers.Infrastructure.csproj", "dotnet3.1/Hydra.Customers.Infrastructure/"]
-
 COPY ["./hydra-core/dotnet3.1/Hydra.Core/Hydra.Core.csproj", "building blocks/Hydra.Core/"]
 COPY ["./hydra-core/dotnet3.1/Hydra.WebAPI.Core/Hydra.WebAPI.Core.csproj", "building blocks/Hydra.WebAPI.Core/"]
 COPY ["./hydra-core/dotnet3.1/Hydra.Core.MessageBus/Hydra.Core.MessageBus.csproj", "building blocks/Hydra.Core.MessageBus/"]
