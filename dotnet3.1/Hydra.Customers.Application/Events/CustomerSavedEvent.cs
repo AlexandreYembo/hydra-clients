@@ -1,5 +1,5 @@
 using System;
-using Hydra.Core.Messages;
+using Hydra.Core.Mediator.Messages;
 
 namespace Hydra.Customers.Application.Events
 {

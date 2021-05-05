@@ -1,7 +1,7 @@
 using AutoMapper;
+using Hydra.Core.API.Identity;
 using Hydra.Customers.API.AutoMapper;
 using Hydra.Customers.Infrastructure.Data;
-using Hydra.WebAPI.Core.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

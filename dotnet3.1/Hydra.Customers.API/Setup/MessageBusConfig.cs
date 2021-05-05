@@ -1,4 +1,4 @@
-using Hydra.Core.Extensions;
+using Hydra.Core.API.Extensions;
 using Hydra.Core.MessageBus;
 using Hydra.Customers.API.Services;
 using Microsoft.Extensions.Configuration;

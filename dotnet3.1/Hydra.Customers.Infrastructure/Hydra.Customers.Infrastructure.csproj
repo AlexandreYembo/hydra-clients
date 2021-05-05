@@ -1,10 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <ItemGroup>
-    <ProjectReference Include="..\Hydra.Customers.Domain\Hydra.Customers.Domain.csproj" />
-    <ProjectReference Include="..\..\hydra-core\dotnet3.1\Hydra.Core\Hydra.Core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
+    <PackageReference Include="Hydra.Core.Data" Version="1.0.0-beta-210505.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.6" />
@@ -17,6 +13,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hydra.Customers.Domain\Hydra.Customers.Domain.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>

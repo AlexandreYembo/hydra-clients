@@ -2,13 +2,13 @@
 using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using Hydra.Core.Communication.Mediator;
+using Hydra.Core.API.Controllers;
+using Hydra.Core.API.Identity;
+using Hydra.Core.API.User;
+using Hydra.Core.Mediator.Abstractions.Mediator;
 using Hydra.Customers.API.DTO;
 using Hydra.Customers.Application.Commands;
 using Hydra.Customers.Domain.Repository;
-using Hydra.WebAPI.Core.Controllers;
-using Hydra.WebAPI.Core.Identity;
-using Hydra.WebAPI.Core.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hydra.Customers.API.Controllers
