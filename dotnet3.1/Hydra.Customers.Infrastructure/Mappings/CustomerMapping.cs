@@ -1,4 +1,4 @@
-using Hydra.Core.DomainObjects;
+using Hydra.Core.Domain.Validations;
 using Hydra.Customers.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

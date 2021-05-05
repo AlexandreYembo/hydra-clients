@@ -1,5 +1,7 @@
 using System;
-using Hydra.Core.DomainObjects;
+using Hydra.Core.Abstractions.DomainObjects;
+using Hydra.Core.Domain.DomainObjects;
+using Hydra.Core.Domain.Validations;
 
 namespace Hydra.Customers.Domain.Models
 {
@@ -24,5 +26,10 @@ namespace Hydra.Customers.Domain.Models
         public void ChangeEmail(string email) => Email = new Email(email);
 
         public void SetAddress(Address address) => Address = address;
-     }
+
+        public override bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
-using Hydra.Core.Messages;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Models;
 using Hydra.Customers.Domain.Repository;
@@ -35,7 +35,14 @@ namespace Hydra.Customers.Application.Commands
             //Persist on Database
             if(existingCustomer != null) //the the customer with the same identity number exists in dabase base
             {
-                AddError("There is an existing user with the same identity nunmber.");
+                try
+                {
+                    AddError("There is an existing user with the same identity nunmber.");
+                }
+                catch (System.Exception)
+                {
+                    throw;
+                }
                 return ValidationResult;
             }
 

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Hydra.Core.Data;
+using Hydra.Core.Abstractions.Data;
 using Hydra.Customers.Domain.Models;
 
 namespace Hydra.Customers.Domain.Repository

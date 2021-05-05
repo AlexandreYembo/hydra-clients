@@ -2,10 +2,11 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
-using Hydra.Core.Communication.Mediator;
-using Hydra.Core.Integration.Messages;
+using Hydra.Core.Mediator.Abstractions.Mediator;
+using Hydra.Core.Mediator.Integration;
 using Hydra.Core.MessageBus;
 using Hydra.Customers.Application.Commands;
+using Hydra.User.Integration.Messages;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 

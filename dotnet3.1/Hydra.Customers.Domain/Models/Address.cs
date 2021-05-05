@@ -1,5 +1,5 @@
 using System;
-using Hydra.Core.DomainObjects;
+using Hydra.Core.Domain.DomainObjects;
 
 namespace Hydra.Customers.Domain.Models
 {
@@ -28,5 +28,10 @@ namespace Hydra.Customers.Domain.Models
 
         //EF Relation
         public Customer Customer { get; protected set; }
+
+        public override bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

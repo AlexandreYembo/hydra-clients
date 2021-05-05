@@ -1,12 +1,12 @@
 using FluentValidation.Results;
-using Hydra.Core.Communication.Mediator;
-using Hydra.Customers.API.Services;
+using Hydra.Core.API.User;
+using Hydra.Core.Mediator.Abstractions.Mediator;
+using Hydra.Core.Mediator.Communication;
 using Hydra.Customers.Application.Commands;
 using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Repository;
 using Hydra.Customers.Infrastructure.Data;
 using Hydra.Customers.Infrastructure.Repositories;
-using Hydra.WebAPI.Core.User;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;

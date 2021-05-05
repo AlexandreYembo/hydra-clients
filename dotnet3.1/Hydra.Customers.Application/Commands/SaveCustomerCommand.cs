@@ -1,5 +1,5 @@
 using System;
-using Hydra.Core.Messages;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Customers.Application.Validations;
 
 namespace Hydra.Customers.Application.Commands
