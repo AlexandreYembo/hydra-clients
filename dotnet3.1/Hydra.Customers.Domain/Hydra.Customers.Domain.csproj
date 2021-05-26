@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hydra.Core.Abstractions" Version="1.1.0-stage1" />
-    <PackageReference Include="Hydra.Core.Domain" Version="1.1.0-stage1" />
+    <PackageReference Include="Hydra.Core.Abstractions" Version="1.1.0" />
+    <PackageReference Include="Hydra.Core.Domain" Version="1.1.0" />
   </ItemGroup>
 
 </Project>

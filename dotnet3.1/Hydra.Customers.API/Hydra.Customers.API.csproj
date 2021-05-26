@@ -2,7 +2,7 @@
   <ItemGroup>
     <PackageReference Include="automapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
-    <PackageReference Include="Hydra.Core.API" Version="1.1.0-stage1" />
+    <PackageReference Include="Hydra.Core.API" Version="1.1.0" />
     <PackageReference Include="Hydra.Ecommerce.User.Integrations" Version="1.0.0-beta-210526.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
