@@ -1,6 +1,6 @@
 using System;
 using FluentValidation;
-using Hydra.Core.DomainObjects;
+using Hydra.Core.Domain.Validations;
 using Hydra.Customers.Application.Commands;
 
 namespace Hydra.Customers.Application.Validations

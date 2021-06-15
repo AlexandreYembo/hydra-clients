@@ -1,10 +1,11 @@
 using System;
 using FluentValidation;
-using Hydra.Core.Messages;
+using FluentValidation.Results;
+using Hydra.Core.Mediator.Messages;
 
 namespace Hydra.Customers.Application.Commands
 {
-    public class SaveAddressCommand : Command
+    public class SaveAddressCommand : Command<ValidationResult>
     {
         public SaveAddressCommand()
         {

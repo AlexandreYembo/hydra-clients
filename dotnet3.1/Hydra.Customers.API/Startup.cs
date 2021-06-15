@@ -1,7 +1,6 @@
+using Hydra.Core.API.Identity;
+using Hydra.Core.API.Setups;
 using Hydra.Customers.API.Setup;
-using Hydra.WebAPI.Core.Identity;
-using Hydra.WebAPI.Core.Setups;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

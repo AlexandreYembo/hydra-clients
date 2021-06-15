@@ -1,12 +1,13 @@
 using FluentValidation.Results;
-using Hydra.Core.Communication.Mediator;
-using Hydra.Customers.API.Services;
+using Hydra.Core.API.User;
+using Hydra.Core.Mediator.Abstractions.Mediator;
+using Hydra.Core.Mediator.Communication;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Customers.Application.Commands;
 using Hydra.Customers.Application.Events;
 using Hydra.Customers.Domain.Repository;
 using Hydra.Customers.Infrastructure.Data;
 using Hydra.Customers.Infrastructure.Repositories;
-using Hydra.WebAPI.Core.User;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,9 +26,9 @@ namespace Hydra.Customers.API.Setup
             services.AddScoped<IMediatorHandler, MediatorHandler>();
 
             //DI for commands
-            services.AddScoped<IRequestHandler<SaveCustomerCommand, ValidationResult>, CustomerCommandHandler>();
-            services.AddScoped<IRequestHandler<UpdateCustomerCommand, ValidationResult>, CustomerCommandHandler>();
-            services.AddScoped<IRequestHandler<SaveAddressCommand, ValidationResult>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<SaveCustomerCommand, CommandResult<ValidationResult>>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCustomerCommand, CommandResult<ValidationResult>>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<SaveAddressCommand, CommandResult<ValidationResult>>, CustomerCommandHandler>();
 
             //DI for Events
             services.AddScoped<INotificationHandler<CustomerSavedEvent>, CustomerEventHandler>();

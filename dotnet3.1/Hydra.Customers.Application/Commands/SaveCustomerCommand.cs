@@ -1,5 +1,6 @@
 using System;
-using Hydra.Core.Messages;
+using FluentValidation.Results;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Customers.Application.Validations;
 
 namespace Hydra.Customers.Application.Commands
@@ -7,7 +8,7 @@ namespace Hydra.Customers.Application.Commands
     /// <summary>
     /// This class is a transport that represents only one purpose
     /// </summary>
-    public class SaveCustomerCommand : Command
+    public class SaveCustomerCommand : Command<ValidationResult>
     {
         public SaveCustomerCommand(){ }
         

@@ -1,17 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <ItemGroup>
-    <ProjectReference Include="..\Hydra.Customers.Domain\Hydra.Customers.Domain.csproj" />
-    <ProjectReference Include="..\Hydra.Customers.Infrastructure\Hydra.Customers.Infrastructure.csproj" />
-    <ProjectReference Include="..\Hydra.Customers.Application\Hydra.Customers.Application.csproj" />
-    <ProjectReference Include="..\..\hydra-core\dotnet3.1\Hydra.Core.Integration\Hydra.Core.Integration.csproj" />
-    <ProjectReference Include="..\..\hydra-core\dotnet3.1\Hydra.Core.MessageBus\Hydra.Core.MessageBus.csproj" />
-    <ProjectReference Include="..\..\hydra-core\dotnet3.1\Hydra.Core\Hydra.Core.csproj" />
-    <ProjectReference Include="..\..\hydra-core\dotnet3.1\Hydra.WebAPI.Core\Hydra.WebAPI.Core.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="automapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Hydra.Core.API" Version="1.1.0" />
+    <PackageReference Include="Hydra.Ecommerce.User.Integrations" Version="1.0.0-beta-210526.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.6" />
@@ -22,6 +14,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
    </PackageReference>
    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hydra.Customers.Application\Hydra.Customers.Application.csproj" />
+    <ProjectReference Include="..\Hydra.Customers.Infrastructure\Hydra.Customers.Infrastructure.csproj" />
+    <ProjectReference Include="..\Hydra.Customers.Domain\Hydra.Customers.Domain.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>

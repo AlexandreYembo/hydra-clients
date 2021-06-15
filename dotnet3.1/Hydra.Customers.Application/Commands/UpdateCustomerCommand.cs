@@ -1,10 +1,11 @@
 using System;
-using Hydra.Core.Messages;
+using FluentValidation.Results;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Customers.Application.Validations;
 
 namespace Hydra.Customers.Application.Commands
 {
-    public class UpdateCustomerCommand : Command
+    public class UpdateCustomerCommand : Command<ValidationResult>
     {
 
         public UpdateCustomerCommand() { }

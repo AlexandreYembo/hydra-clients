@@ -2,10 +2,12 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
-using Hydra.Core.Communication.Mediator;
-using Hydra.Core.Integration.Messages;
+using Hydra.Core.Mediator.Abstractions.Mediator;
+using Hydra.Core.Mediator.Integration;
+using Hydra.Core.Mediator.Messages;
 using Hydra.Core.MessageBus;
 using Hydra.Customers.Application.Commands;
+using Hydra.User.Integration.Messages;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -33,17 +35,19 @@ namespace Hydra.Customers.API.Services
             return Task.CompletedTask;
         }
 
-        private async Task<ResponseMessage> SaveCustomer(UserSaveIntegrationEvent messge){
-            var customerCommand = new SaveCustomerCommand(messge.Id, messge.Name, messge.Email, messge.IdentityNumber);
-            ValidationResult result;
+        private async Task<ResponseMessage> SaveCustomer(UserSaveIntegrationEvent message){
+            var customerCommand = new SaveCustomerCommand(message.AggregateId, message.Name, message.Email, message.IdentityNumber);
+            CommandResult<ValidationResult> result;
             using(var scope = _serviceProvider.CreateScope()) // Create scope inside the singleton (Lifecicle scope)
             {
                 //Basically service locator is used When it is outside the context or when the class cannot pass arguments through the constructor
                 var mediator = scope.ServiceProvider.GetRequiredService<IMediatorHandler>();
-                result = await mediator.SendCommand(customerCommand);
+                result = await mediator.SendCommand<SaveCustomerCommand, ValidationResult>(customerCommand);
             }
 
-            return new ResponseMessage(result);
+            var responseMessage = new ResponseMessage(result.ValidationResult);
+            responseMessage.AggregateId = message.AggregateId;
+            return responseMessage;
         }
 
         /// <summary>
